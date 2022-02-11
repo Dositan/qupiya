@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "qupiya"
 version = "0.1.0"
-description = ""
+description = "🔐 Yet yet another another password managing app"
 authors = ["Dastan Ozgeldi <ozgdastan@gmail.com>"]
 
 [tool.poetry.dependencies]
