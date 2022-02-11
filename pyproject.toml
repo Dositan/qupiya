@@ -1,3 +1,9 @@
+[tool.black]
+exclude = "migrations"
+
+[tool.isort]
+skip = "migrations"
+
 [tool.poetry]
 name = "qupiya"
 version = "0.1.0"
