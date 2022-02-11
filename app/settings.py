@@ -5,13 +5,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class BaseConfig:
     SECRET_KEY = os.getenv("SECRET_KEY", secrets.token_urlsafe(48))
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.getenv("DEV_DATABASE_URL")
+
 
 class ProductionConfig(BaseConfig):
     DEBUG = False
@@ -22,7 +25,8 @@ class ProductionConfig(BaseConfig):
             "postgres://", "postgresql://", 1
         )
 
+
 settings = {
-    "development": DevelopmentConfig, 
+    "development": DevelopmentConfig,
     "production": ProductionConfig,
 }

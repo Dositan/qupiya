@@ -1,9 +1,11 @@
 import logging
 import sys
+
 from flask import Flask
 
+from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
-from app.extensions import bcrypt, db, migrate, csrf_protect, login_manager
+
 
 def create_app():
     """Qupiya app factory."""
@@ -13,6 +15,7 @@ def create_app():
     configure_logger(app)
     return app
 
+
 def register_extensions(app):
     """Register Flask extensions."""
     db.init_app(app)
@@ -21,6 +24,7 @@ def register_extensions(app):
     login_manager.init_app(app)
     bcrypt.init_app(app)
     return None
+
 
 def configure_logger(app):
     """Configure app logger."""
