@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from flask import Flask
+from flask import Flask, render_template
 
 from app import commands, main, auth
 from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
@@ -39,6 +39,26 @@ def register_blueprints(app):
 def register_commands(app):
     """Register Qupiya commands."""
     app.cli.add_command(commands.lint)
+
+
+def register_errorhandlers(app):
+    """Register error handlers."""
+    messages = {
+        404: "Not Found",
+        500: "Server Error",
+    }
+
+    def render_error(error):
+        """Render error template.
+
+        If an HTTPException, pull the `code` attribute; defaults to 500
+        """
+        error_code = getattr(error, "code", 500)
+        return render_template("error.html", error, messages[error]), error_code
+
+    for errcode in (404, 500):
+        app.errorhandler(errcode)(render_error)
+    return None
 
 
 def configure_logger(app):
