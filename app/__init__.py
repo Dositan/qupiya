@@ -3,7 +3,7 @@ import sys
 
 from flask import Flask
 
-from app import commands, auth
+from app import commands, main, auth
 from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
 
@@ -32,6 +32,7 @@ def register_extensions(app):
 def register_blueprints(app):
     """Register Qupiya blueprints."""
     app.register_blueprint(auth.bp)
+    app.register_blueprint(main.bp)
     return None
 
 
