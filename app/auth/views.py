@@ -46,3 +46,15 @@ def logout():
     logout_user()
     flash("You are logged out.", "info")
     return redirect(url_for("main.index"))
+
+
+@bp.route("/u/<username>")
+@login_required
+def profile(username):
+    """
+    `/u/<username>` endpoint
+
+    Shows user-specific page (names, logins, passwords etc.)
+    """
+    user = User.query.filter_by(username=username).first()
+    return render_template("auth/profile.html", user=user)
