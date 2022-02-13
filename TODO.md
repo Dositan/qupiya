@@ -1,0 +1,10 @@
+- [ ] App index: make it the "about" page;
+- [ ] Authentication;
+- [ ] Implement features a minimal manager provides:
+    - [ ] `save`;
+    - [ ] `update`;
+    - [ ] `export`;
+    - [ ] `generate`;
+    - [ ] `show`;
+    - [ ] `remove`;
+    - [ ] `check`;
