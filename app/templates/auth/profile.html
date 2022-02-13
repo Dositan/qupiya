@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="profile">
+  <h1 align="center">User: {{ user.username }}</h1>
+  <h2 align="center">Created: {{ user.created_at.strftime("%Y:%m:%d") }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Login</th>
+        <th>Password</th>
+        <th>Comment</th>
+        <th>Saved At</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in user.records %}
+      <tr>
+        <td>
+          <a href="{{ url_for('main.update', id=record.id) }}"
+            >{{ record.name }}</a
+          >
+        </td>
+        <td>{{ record.login }}</td>
+        <td>{{ record.password }}</td>
+        <td>{{ record.comment or "Not given" }}</td>
+        <td>{{ record.saved_at.strftime("%Y:%m:%d") }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
