@@ -35,9 +35,6 @@ class RecordForm(FlaskForm):
     )
     comment = StringField(
         "Comment",
-        validators=[
-            Optional(),
-            Length(max=200, message="Invalid comment length")
-        ]
+        validators=[Optional(), Length(max=200, message="Invalid comment length")],
     )
     submit = SubmitField("Save")

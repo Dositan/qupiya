@@ -3,7 +3,7 @@ import sys
 
 from flask import Flask, render_template
 
-from app import commands, main, auth
+from app import auth, commands, main
 from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
 
