@@ -3,7 +3,7 @@ import sys
 
 from flask import Flask
 
-from app import commands
+from app import commands, auth
 from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
 
@@ -13,6 +13,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(settings[app.config["ENV"]])
     register_extensions(app)
+    register_blueprints(app)
     register_commands(app)
     configure_logger(app)
     return app
@@ -25,6 +26,12 @@ def register_extensions(app):
     csrf_protect.init_app(app)
     login_manager.init_app(app)
     bcrypt.init_app(app)
+    return None
+
+
+def register_blueprints(app):
+    """Register Qupiya blueprints."""
+    app.register_blueprint(auth.bp)
     return None
 
 

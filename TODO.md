@@ -1,5 +1,5 @@
 - [ ] App index: make it the "about" page;
-- [ ] Authentication;
+- [x] Authentication;
 - [ ] Implement features a minimal manager provides:
     - [ ] `save`;
     - [ ] `update`;
