@@ -3,6 +3,7 @@ import sys
 
 from flask import Flask
 
+from app import commands
 from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
 
@@ -12,6 +13,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(settings[app.config["ENV"]])
     register_extensions(app)
+    register_commands(app)
     configure_logger(app)
     return app
 
@@ -26,8 +28,13 @@ def register_extensions(app):
     return None
 
 
+def register_commands(app):
+    """Register Qupiya commands."""
+    app.cli.add_command(commands.lint)
+
+
 def configure_logger(app):
-    """Configure app logger."""
+    """Configure Qupiya logger."""
     handler = logging.StreamHandler(sys.stdout)
     if not app.logger.handlers:
         app.logger.addHandler(handler)
