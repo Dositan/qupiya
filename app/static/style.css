@@ -121,6 +121,13 @@ nav ul li.btn.hide i:before {
   }
 }
 
+.flashed {
+  margin: auto;
+  display: table;
+  color: white;
+  border: 1px solid red;
+}
+
 .main-input {
   color: antiquewhite;
   font-weight: 500;
