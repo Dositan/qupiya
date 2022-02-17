@@ -1,6 +1,7 @@
 import secrets
 
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask_babel import _
 from flask_login import current_user, login_required
 
 from .forms import GenerateForm, RecordForm
@@ -51,7 +52,7 @@ def save():
             comment=form.comment.data,
             user_id=current_user.id,
         )
-        flash("Your password has been saved.", "success")
+        flash(_("Your password has been saved."), "success")
         return redirect(url_for("main.index"))
     return render_template("main/save.html", form=form)
 
@@ -69,7 +70,7 @@ def update(id):
             comment=form.comment.data,
             user_id=current_user.id,
         )
-        flash("Your credentials were updated.", "success")
+        flash(_("Your credentials were updated."), "success")
         return redirect(url_for("main.index"))
     return render_template("main/update.html", form=form, record=record)
 
@@ -78,5 +79,5 @@ def update(id):
 @login_required
 def delete(id):
     Record.get_by_id(id).delete()
-    flash("Your password has been deleted.", "success")
+    flash(_("Your password has been deleted."), "success")
     return redirect(url_for("main.index"))

@@ -1,11 +1,26 @@
 import logging
 import sys
 
-from flask import Flask, render_template
+from flask import Flask, g, render_template, request
 
 from app import auth, commands, main
-from app.extensions import bcrypt, csrf_protect, db, login_manager, migrate
+from app.extensions import babel, bcrypt, csrf_protect, db, login_manager, migrate
 from app.settings import settings
+
+
+@babel.localeselector
+def get_locale():
+    user = getattr(g, "user", None)
+    if user is not None:
+        return user.locale
+    return request.accept_languages.best_match(["en", "ru", "kk"])
+
+
+@babel.timezoneselector
+def get_timezone():
+    user = getattr(g, "user", None)
+    if user is not None:
+        return user.timezone
 
 
 def create_app():
@@ -23,6 +38,7 @@ def register_extensions(app):
     """Register Flask extensions."""
     db.init_app(app)
     migrate.init_app(app, db)
+    babel.init_app(app)
     csrf_protect.init_app(app)
     login_manager.init_app(app)
     bcrypt.init_app(app)
@@ -39,6 +55,7 @@ def register_blueprints(app):
 def register_commands(app):
     """Register Qupiya commands."""
     app.cli.add_command(commands.lint)
+    app.cli.add_command(commands.translate)
 
 
 def register_errorhandlers(app):
