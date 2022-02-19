@@ -6,6 +6,8 @@
     <p>- It's "qūpia", which means "secret" in Kazakh</p>
 </div>
 
+![App Demonstration](app/static/demo.png)
+
 ### Why to use?
 **IDK.** Qupiya is just another password manager among many, `but it's open source.`
 
