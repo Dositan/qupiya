@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from flask import Flask, g, render_template, request
+from flask import Flask, current_app, g, render_template, request
 
 from app import auth, commands, main
 from app.extensions import babel, bcrypt, csrf_protect, db, login_manager, migrate
@@ -13,7 +13,7 @@ def get_locale():
     user = getattr(g, "user", None)
     if user is not None:
         return user.locale
-    return request.accept_languages.best_match(["en", "ru", "kk"])
+    return request.accept_languages.best_match(current_app.config["LANGUAGES"])
 
 
 @babel.timezoneselector
