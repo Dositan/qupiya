@@ -8,6 +8,7 @@ load_dotenv()
 
 class BaseConfig:
     LANGUAGES = ["en", "ru", "kk"]
+    BABEL_DEFAULT_LOCALE = "kk"
     SECRET_KEY = os.getenv("SECRET_KEY", secrets.token_urlsafe(48))
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
