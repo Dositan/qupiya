@@ -27,24 +27,24 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>qupiya - Password Manager</title>
+    <title>{{ _("qupiya - Password Manager") }}</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li class="logo"><a href="/">qupiya - Password Manager</a></li>
-        <li class="items"><a href="{{ url_for('main.generate') }}">Generate</a></li>
+        <li class="logo"><a href="/">{{ _("qupiya - Password Manager") }}</a></li>
+        <li class="items"><a href="{{ url_for('main.generate') }}">{{ _("Generate") }}</a></li>
         {% if current_user and current_user.is_authenticated %}
-        <li class="items"><a href="{{ url_for('main.save') }}">Save</a></li>
+        <li class="items"><a href="{{ url_for('main.save') }}">{{ _("Save") }}</a></li>
         <li class="items">
-          <a href="{{ url_for('auth.profile', username=current_user.username) }}">Profile</a>
+          <a href="{{ url_for('auth.profile', username=current_user.username) }}">{{ _("Profile") }}</a>
         </li>
         <li class="items">
-          <a href="{{ url_for('auth.logout') }}">Log Out</a>
+          <a href="{{ url_for('auth.logout') }}">{{ _("Log Out") }}</a>
         </li>
         {% else %}
-        <li class="items"><a href="{{ url_for('auth.register') }}">Register</a></li>
-        <li class="items"><a href="{{ url_for('auth.login') }}">Log In</a></li>
+        <li class="items"><a href="{{ url_for('auth.register') }}">{{ _("Register") }}</a></li>
+        <li class="items"><a href="{{ url_for('auth.login') }}">{{ _("Log In") }}</a></li>
         {% endif %}
         <li class="btn">
           <a href="#"><i class="fas fa-bars"></i></a>

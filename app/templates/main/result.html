@@ -10,8 +10,8 @@
             document.execCommand("copy");
         }
     </script>
-    <h1>&#60 Result &#62</h1>
+    <h1>&#60 {{ _("Result") }} &#62</h1>
     <input type="text" value="{{ result }}" id="password" class="main-input" readonly>
-    <button onclick="copyPassword()" class="button">Copy</button>
+    <button onclick="copyPassword()" class="button">{{ _("Copy") }}</button>
 </div>
 {% endblock %}

@@ -2,12 +2,12 @@
 
 {% block body %}
 <form method="POST" action="" class="manager-form">
-    <h1>&#60 Save Password &#62</h1>
+    <h1>&#60 {{ _("Save Password") }} &#62</h1>
     {{ form.hidden_tag() }}
-    {{ form.name(placeholder="Enter the name here", autofocus=true, class="main-input") }}
-    {{ form.login(placeholder="Login here", autofocus=true, class="main-input") }}
-    {{ form.password(placeholder="Password here", autofocus=true, class="main-input") }}
-    {{ form.comment(placeholder="Comment here (optional)", autofocus=true, class="main-input") }}
+    {{ form.name(placeholder=_("Enter the name here"), autofocus=true, class="main-input") }}
+    {{ form.login(placeholder=_("Login here"), autofocus=true, class="main-input") }}
+    {{ form.password(placeholder=_("Password here"), autofocus=true, class="main-input") }}
+    {{ form.comment(placeholder=_("Comment here (optional)"), autofocus=true, class="main-input") }}
     {{ form.submit(class="button") }}
     {% if form.errors %}
         <div class="form-errors">

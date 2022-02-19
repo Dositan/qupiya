@@ -2,9 +2,9 @@
 
 {% block body %}
 <form method="POST" action="" class="manager-form">
-    <h1>&#60 Generate &#62</h1>
+    <h1>&#60 {{ _("Generate") }} &#62</h1>
     {{ form.hidden_tag() }}
-    {{ form.length(placeholder="Password length here", autofocus=true, class="main-input") }}
+    {{ form.length(placeholder=_("Password length here"), autofocus=true, class="main-input") }}
     {{ form.submit(class="button") }}
     {% if form.errors %}
         <div class="form-errors">

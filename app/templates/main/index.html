@@ -2,28 +2,28 @@
 
 {% block body %}
 <div class="index">
-    <h1>About Qupiya</h1>
-    <h2>What on the Earth is qupiya?</h2>
-    <p>Qupiya is an open-source Password Manager project.</p>
-    <p>It was created using Flask + Jinja templating system.</p>
+    <h1>{{ _("About Qupiya") }}</h1>
+    <h2>{{ _("What on the Earth is qupiya?") }}</h2>
+    <p>{{ _("Qupiya is an open-source Password Manager project.") }}</p>
+    <p>{{ _("It was created using Flask + Jinja templating system.") }}</p>
 
-    <h2>Features:</h2>
+    <h2>{{ _("Features:") }}</h2>
     <ul>
-        <li>✨ Custom URL token</li>
-        <li>🙀 Random password Generator</li>
-        <li>🔐 Goddamn safety</li>
-        <li>🚀 Profile Page</li>
+        <li>🙀 {{ _("Random password Generator") }}</li>
+        <li>🔐 {{ _("Goddamn safety") }}</li>
+        <li>🚀 {{ _("Profile Page") }}</li>
     </ul>
 
-    <h2>Plans:</h2>
+    <h2>{{ _("Plans:") }}</h2>
     <ul>
-        <li>Passwords Import</li>
-        <li>Records Log</li>
-        <li>Represent a Table of Passwords</li>
+        <li>{{ _("Passwords Import") }}</li>
+        <li>{{ _("Passwords Export") }}</li>
+        <li>{{ _("2-Factor Authentication") }}</li>
+        <li>{{ _("Represent a Table of Passwords") }}</li>
     </ul>
 
-    <h2>Do I need to Register?</h2>
-    <p>Yep. Logging in is essential part for password managers,</p>
-    <p>as they need to know whose credentials they're managing.</p>
+    <h2>{{ _("Do I need to Register?") }}</h2>
+    <p>{{ _("Yep. Logging in is essential part for password managers,") }}</p>
+    <p>{{ _("as they need to know whose credentials they're managing.") }}</p>
 </div>
 {% endblock %}

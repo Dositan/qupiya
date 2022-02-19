@@ -7,16 +7,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-16 19:55+0600\n"
-"PO-Revision-Date: 2022-02-16 19:42+0600\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: kk\n"
+"POT-Creation-Date: 2022-02-19 11:04+0600\n"
+"PO-Revision-Date: 2022-02-19 11:17+0600\n"
+"Last-Translator: \n"
 "Language-Team: kk <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: app/auth/views.py:25
+msgid "Thank you for registering. You've now unlocked some new features!"
+msgstr "Тіркелгеніңізге рақмет. Жаңа қызықтар ашылуда!"
+
+#: app/auth/views.py:38
+msgid "You are logged in."
+msgstr "Аккаунтқа кірдіңіз."
+
+#: app/auth/views.py:48
+msgid "You are logged out."
+msgstr "Аккаунттан шықтыңыз."
 
 #: app/main/views.py:55
 msgid "Your password has been saved."
@@ -30,3 +43,130 @@ msgstr "Деректер жаңартылды."
 msgid "Your password has been deleted."
 msgstr "Құпиясөзіңіз жойылды."
 
+#: app/templates/base.html:30 app/templates/base.html:35
+msgid "qupiya - Password Manager"
+msgstr "qupiya - Құпиясөздер Қолбасшысы"
+
+#: app/templates/base.html:36 app/templates/main/generate.html:5
+msgid "Generate"
+msgstr "Құрастыру"
+
+#: app/templates/base.html:38
+msgid "Save"
+msgstr "Сақтау"
+
+#: app/templates/base.html:40
+msgid "Profile"
+msgstr "Профиль"
+
+#: app/templates/base.html:43
+msgid "Log Out"
+msgstr "Шығу"
+
+#: app/templates/base.html:46
+msgid "Register"
+msgstr "Тіркелу"
+
+#: app/templates/base.html:47
+msgid "Log In"
+msgstr "Кіру"
+
+#: app/templates/main/generate.html:7
+msgid "Password length here"
+msgstr "Құпиясөз ұзындығы"
+
+#: app/templates/main/index.html:5
+msgid "About Qupiya"
+msgstr "Qupiya жайлы"
+
+#: app/templates/main/index.html:6
+msgid "What on the Earth is qupiya?"
+msgstr "Qupiya деген не жалпы?"
+
+#: app/templates/main/index.html:7
+msgid "Qupiya is an open-source Password Manager project."
+msgstr "Qupiya - еркін Құпиясөз Басқарушы жобасы."
+
+#: app/templates/main/index.html:8
+msgid "It was created using Flask + Jinja templating system."
+msgstr "Ол Flask және Jinja технологиялары арқылы жасалған."
+
+#: app/templates/main/index.html:10
+msgid "Features:"
+msgstr "Қабілеттері:"
+
+#: app/templates/main/index.html:12
+msgid "Random password Generator"
+msgstr "Рандом құпиясөз Құрастыру"
+
+#: app/templates/main/index.html:13
+msgid "Goddamn safety"
+msgstr "Қауіпсіздік"
+
+#: app/templates/main/index.html:14
+msgid "Profile Page"
+msgstr "Аккаунт Профилі"
+
+#: app/templates/main/index.html:17
+msgid "Plans:"
+msgstr "Жоспарлар:"
+
+#: app/templates/main/index.html:19
+msgid "Passwords Import"
+msgstr "Құпиясөздерді Импорттау"
+
+#: app/templates/main/index.html:20
+msgid "Passwords Export"
+msgstr "Құпиясөздерді Экспорттау"
+
+#: app/templates/main/index.html:21
+msgid "2-Factor Authentication"
+msgstr "2-факторлы Аутентификация"
+
+#: app/templates/main/index.html:22
+msgid "Represent a Table of Passwords"
+msgstr "Құпиясөздерді Кесте ретінде көрсету"
+
+#: app/templates/main/index.html:25
+msgid "Do I need to Register?"
+msgstr "Тіркелуім міндетті ме?"
+
+#: app/templates/main/index.html:26
+msgid "Yep. Logging in is essential part for password managers,"
+msgstr "Иәп. Тіркелу біз үшін маңызды болып табылады,"
+
+#: app/templates/main/index.html:27
+msgid "as they need to know whose credentials they're managing."
+msgstr "себебі құпиясөздер тіркелген аккаунтпен тығыз байланысты."
+
+#: app/templates/main/result.html:13
+msgid "Result"
+msgstr "Нәтиже"
+
+#: app/templates/main/result.html:15
+msgid "Copy"
+msgstr "Көшіру"
+
+#: app/templates/main/save.html:5
+msgid "Save Password"
+msgstr "Құпиясөзді Сақтау"
+
+#: app/templates/main/save.html:7
+msgid "Enter the name here"
+msgstr "Құпиясөз ненікі"
+
+#: app/templates/main/save.html:8
+msgid "Login here"
+msgstr "Логинді еңгізіңіз"
+
+#: app/templates/main/save.html:9
+msgid "Password here"
+msgstr "Құпиясөзді еңгізіңіз"
+
+#: app/templates/main/save.html:10
+msgid "Comment here (optional)"
+msgstr "Көмекші коммент (міндетті емес)"
+
+#: app/templates/main/update.html:5
+msgid "Update Password"
+msgstr "Құпиясөзді Жаңарту"

@@ -7,17 +7,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-16 19:55+0600\n"
-"PO-Revision-Date: 2022-02-16 19:42+0600\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ru\n"
+"POT-Creation-Date: 2022-02-19 11:04+0600\n"
+"PO-Revision-Date: 2022-02-19 11:24+0600\n"
+"Last-Translator: \n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: app/auth/views.py:25
+msgid "Thank you for registering. You've now unlocked some new features!"
+msgstr "Спасибо за регистрацию. Теперь вам доступны новые функции!"
+
+#: app/auth/views.py:38
+msgid "You are logged in."
+msgstr "Вход выполнен."
+
+#: app/auth/views.py:48
+msgid "You are logged out."
+msgstr "Выход осуществлен."
 
 #: app/main/views.py:55
 msgid "Your password has been saved."
@@ -31,3 +44,130 @@ msgstr "Ваши данные обновились."
 msgid "Your password has been deleted."
 msgstr "Пароль удалён."
 
+#: app/templates/base.html:30 app/templates/base.html:35
+msgid "qupiya - Password Manager"
+msgstr "qupiya - Менеджер Паролей"
+
+#: app/templates/base.html:36 app/templates/main/generate.html:5
+msgid "Generate"
+msgstr "Сгенерировать"
+
+#: app/templates/base.html:38
+msgid "Save"
+msgstr "Сохранить"
+
+#: app/templates/base.html:40
+msgid "Profile"
+msgstr "Профиль"
+
+#: app/templates/base.html:43
+msgid "Log Out"
+msgstr "Выйти"
+
+#: app/templates/base.html:46
+msgid "Register"
+msgstr "Регистрация"
+
+#: app/templates/base.html:47
+msgid "Log In"
+msgstr "Войти"
+
+#: app/templates/main/generate.html:7
+msgid "Password length here"
+msgstr "Укажите длину пароля"
+
+#: app/templates/main/index.html:5
+msgid "About Qupiya"
+msgstr "Про Qupiya"
+
+#: app/templates/main/index.html:6
+msgid "What on the Earth is qupiya?"
+msgstr "Что вообще такое Qupiya?"
+
+#: app/templates/main/index.html:7
+msgid "Qupiya is an open-source Password Manager project."
+msgstr "Qupiya - Менеджер Паролей с открытым исходным кодом."
+
+#: app/templates/main/index.html:8
+msgid "It was created using Flask + Jinja templating system."
+msgstr "Он был создан используя технологии Flask + Jinja."
+
+#: app/templates/main/index.html:10
+msgid "Features:"
+msgstr "Функции:"
+
+#: app/templates/main/index.html:12
+msgid "Random password Generator"
+msgstr "Рандомный Генератор паролей"
+
+#: app/templates/main/index.html:13
+msgid "Goddamn safety"
+msgstr "Безопасность"
+
+#: app/templates/main/index.html:14
+msgid "Profile Page"
+msgstr "Страница Профиля"
+
+#: app/templates/main/index.html:17
+msgid "Plans:"
+msgstr "Планы:"
+
+#: app/templates/main/index.html:19
+msgid "Passwords Import"
+msgstr "Импорт Паролей"
+
+#: app/templates/main/index.html:20
+msgid "Passwords Export"
+msgstr "Экспорт Паролей"
+
+#: app/templates/main/index.html:21
+msgid "2-Factor Authentication"
+msgstr "2-факторная Аутентификация"
+
+#: app/templates/main/index.html:22
+msgid "Represent a Table of Passwords"
+msgstr "Выводить Таблицу Паролей"
+
+#: app/templates/main/index.html:25
+msgid "Do I need to Register?"
+msgstr "Нужно ли Мне Регистрироваться?"
+
+#: app/templates/main/index.html:26
+msgid "Yep. Logging in is essential part for password managers,"
+msgstr "Ага. Регистрация - важная часть для менеджеров паролей,"
+
+#: app/templates/main/index.html:27
+msgid "as they need to know whose credentials they're managing."
+msgstr "так как на них привязываются все сохраненные пароли."
+
+#: app/templates/main/result.html:13
+msgid "Result"
+msgstr "Результат"
+
+#: app/templates/main/result.html:15
+msgid "Copy"
+msgstr "Копировать"
+
+#: app/templates/main/save.html:5
+msgid "Save Password"
+msgstr "Сохранить Пароль"
+
+#: app/templates/main/save.html:7
+msgid "Enter the name here"
+msgstr "Введите Имя"
+
+#: app/templates/main/save.html:8
+msgid "Login here"
+msgstr "Введите Логин"
+
+#: app/templates/main/save.html:9
+msgid "Password here"
+msgstr "Введите Пароль"
+
+#: app/templates/main/save.html:10
+msgid "Comment here (optional)"
+msgstr "Подсказка (необязательно)"
+
+#: app/templates/main/update.html:5
+msgid "Update Password"
+msgstr "Обновить Пароль"

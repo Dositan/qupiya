@@ -1,4 +1,5 @@
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask_babel import _
 from flask_login import login_required, login_user, logout_user
 
 from app.extensions import login_manager
@@ -21,7 +22,7 @@ def register():
     if form.validate_on_submit():
         User.create(username=form.username.data, password=form.password.data)
         flash(
-            "Thank you for registering. You've now unlocked some new features!",
+            _("Thank you for registering. You've now unlocked some new features!"),
             "success",
         )
         return redirect(url_for("auth.login"))
@@ -34,7 +35,7 @@ def login():
     form = LoginForm(request.form)
     if form.validate_on_submit():
         login_user(form.user)
-        flash("You are logged in.", "success")
+        flash(_("You are logged in."), "success")
         return redirect(url_for("main.index"))
 
     return render_template("auth/login.html", form=form)
@@ -44,7 +45,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    flash("You are logged out.", "info")
+    flash(_("You are logged out."), "info")
     return redirect(url_for("main.index"))
 
 

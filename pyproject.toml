@@ -6,7 +6,7 @@ skip = "migrations"
 
 [tool.poetry]
 name = "qupiya"
-version = "0.7.0"
+version = "0.7.3"
 description = "🔐 Yet yet another another password managing app"
 authors = ["Dastan Ozgeldi <ozgdastan@gmail.com>"]
 
